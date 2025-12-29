@@ -1,0 +1,2 @@
+FROM registry.redhat.io/rhel9/rhel-bootc:latest
+RUN dnf -y groupinstall 'Workstation' && dnf clean all && systemctl set-default graphical.target
