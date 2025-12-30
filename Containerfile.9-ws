@@ -1,8 +1,3 @@
 FROM registry.redhat.io/rhel9/rhel-bootc:latest
 
-RUN dnf -y groupinstall 'Workstation' --exclude=firefox && dnf clean all
-RUN flatpak remote-add --if-not-exists --subset=verified flathub-verified https://flathub.org/repo/flathub.flatpakrepo
-RUN flatpak install -y flathub-verified org.mozilla.firefox
-RUN systemctl set-default graphical.target
-
 RUN bootc container lint
