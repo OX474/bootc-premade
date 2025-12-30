@@ -29,7 +29,7 @@ jobs:
       DEST_IMAGE: "${{ github.actor }}/${{github.event.repository.name}}"
 
       # List of tags to publish
-      TAGLIST: latest ${{ github.sha }} ${{ github.ref_name }}
+      TAGLIST: 9-ws
 
       # Destination registry for built images
       DEST_REGISTRY_HOST: "ghcr.io"
